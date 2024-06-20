@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiplication and Division Calculator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+      .calculator {
+        background: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .calculator h2 {
+        margin-top: 0;
+      }
+      .calculator div {
+        margin-bottom: 10px;
+      }
+      .calculator label {
+        display: inline-block;
+        width: 100px;
+      }
+      .calculator input {
+        padding: 5px;
+        width: 150px;
+      }
+      .calculator button {
+        padding: 10px 15px;
+        margin-right: 5px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      .calculator button:hover {
+        background-color: #0056b3;
+      }
+      #result {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <h2>JavaScript Calculator</h2>
+      <div>
+        <label for="num1">1st Number:</label>
+        <input type="number" id="num1" />
+      </div>
+      <div>
+        <label for="num2">2nd Number:</label>
+        <input type="number" id="num2" />
+      </div>
+      <div>
+        <button onclick="multiply()">Multiply</button>
+        <button onclick="divide()">Divide</button>
+      </div>
+      <div id="result">The Result Is: <span id="output"></span></div>
+    </div>
+    <script>
+      function multiply() {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+        var result = num1 * num2;
+        document.getElementById("output").textContent = result;
+      }
+
+      function divide() {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+        var result;
+        if (num2 !== 0) {
+          result = num1 / num2;
+        } else {
+          result = "Cannot divide by zero";
+        }
+        document.getElementById("output").textContent = result;
+      }
+    </script>
+  </body>
+</html>
