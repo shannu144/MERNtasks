@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -98,3 +99,105 @@
     </div>
   </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table and Shapes</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      table {
+        width: 50%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background-color: #add8e6;
+      }
+
+      th,
+      td {
+        border: 1px solid #000;
+        padding: 10px;
+        text-align: left;
+      }
+
+      th {
+        font-weight: bold;
+      }
+
+      .shapes {
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        grid-gap: 10px;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .shape {
+        width: 100px;
+        height: 100px;
+        border: 2px solid #32cd32;
+      }
+
+      .rectangle {
+        border-radius: 0;
+      }
+
+      .rounded-rectangle {
+        border-radius: 10px;
+      }
+
+      .oval {
+        border-radius: 50%;
+        width: 100px;
+        height: 50px;
+        align-self: center;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>94</td>
+        </tr>
+        <tr>
+          <td>John</td>
+          <td>Doe</td>
+          <td>80</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="shapes">
+      <div class="shape rectangle"></div>
+      <div class="shape rectangle"></div>
+      <div class="shape rounded-rectangle"></div>
+      <div class="shape rectangle"></div>
+      <div class="shape rectangle"></div>
+      <div class="shape rounded-rectangle"></div>
+      <div class="shape oval"></div>
+      <div class="shape rectangle"></div>
+      <div class="shape rectangle"></div>
+    </div>
+  </body>
+</html>
+>>>>>>> eb6ea3f3e08098d4c5b9f3bb5a1fd7f063089188
