@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        margin: 20px;
+      }
+      button {
+        margin-top: 10px;
+      }
+      p {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button id="showDateBtn">show date</button>
+      <p id="dateDisplay"></p>
+      <button id="showTimeBtn">show Time</button>
+      <p id="timeDisplay"></p>
+    </div>
+    <script>
+      document
+        .getElementById("showDateBtn")
+        .addEventListener("click", function () {
+          const date = new Date();
+          const options = { year: "numeric", month: "long", day: "numeric" };
+          document.getElementById("dateDisplay").innerText =
+            date.toLocaleDateString("en-GB", options);
+        });
+
+      document
+        .getElementById("showTimeBtn")
+        .addEventListener("click", function () {
+          const time = new Date();
+          document.getElementById("timeDisplay").innerText = time.toString();
+        });
+    </script>
+  </body>
+</html>
